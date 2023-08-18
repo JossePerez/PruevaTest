@@ -1,7 +1,7 @@
 <template>
     <header>
         <figure class="imagen-con-texto header-imagen">
-            <img src="../assets/logo.png" alt="Foto Principal" class="img-fluid">
+            <img src="../assets/universo.jpg" alt="Foto Principal" class="img-fluid">
             <figcaption class="texto-imagen">
                 <div class="div-cuadro"></div>
             </figcaption>
@@ -191,14 +191,14 @@
 
 
     <footer class="container-fluid">
-        <div class="row">
-            <div class="col-5" style="background-color: green;">
+        <div class="row footer-contenedor">
+            <div class="col-5">
                 <div class="footer-div-izquierdo">
                     <h4>Informacion de lo que se ve</h4>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum, esse.</p>
                 </div>
             </div>
-            <div class="col-7" style="background-color: rgb(5, 90, 218);">
+            <div class="col-7">
                 <div class="footer-div-derecho">
                     <div>
                         <h4>Contactos</h4>
@@ -225,15 +225,16 @@ import 'bootstrap/dist/js/bootstrap.js';
 
 <style>
 /* header */
-.header-imagen{
-    background-color: orangered;
+
+
+.header-imagen{ 
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .header-imagen img{
-    width: 15rem;
+    width: 100%;
     height: 15rem;
 }
 
@@ -287,6 +288,15 @@ import 'bootstrap/dist/js/bootstrap.js';
 }
 
 /*Footer */
+.footer-contenedor{
+    background-color: #232323;
+    color: white;
+}
+
+.footer-contenedor p{
+    font-size: 14px;
+}
+
 .footer-div-izquierdo{
     margin: 1rem;
     display: flex;
@@ -294,6 +304,7 @@ import 'bootstrap/dist/js/bootstrap.js';
     align-items: center;
     justify-content: center;
 }
+
 .footer-div-derecho{
     margin: 1rem;
     display: flex;
