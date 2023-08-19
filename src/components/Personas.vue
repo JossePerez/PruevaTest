@@ -4,7 +4,7 @@
             <div class="col-ms-12 col-md-6 col-lg-4 col-xl-4" v-for="user in users" :key="user._id">
                 <div class="div-foro" >
                     <div class="div-foro-circular">
-                        <!-- Cargar un img -->
+                        <img src="../assets/cara.webp" alt="" class="img-fluid">
                     </div>
                     <div class="div-foro-info">
                         <h3>{{ user.name }}</h3>
@@ -48,6 +48,16 @@ export default{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    border-radius: 15px;
+    border: 2px solid #5E6A73;
+    padding: 0px;
+    box-shadow: 0px 10px 15px #000000;
+    margin: 35px;
+    width: 15rem;
+}
+.div-foro-circular img{
+    border-radius: 100%;
 }
 
 .div-foro-circular{

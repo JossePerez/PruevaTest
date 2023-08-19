@@ -17,6 +17,7 @@ import 'bootstrap/dist/js/bootstrap.js';
 </script>
 
 <style>
+
     .header-imagen{ 
         display: flex;
         flex-direction: column;
