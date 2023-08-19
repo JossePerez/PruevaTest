@@ -7,8 +7,9 @@
                         <!-- Cargar un img -->
                     </div>
                     <div class="div-foro-info">
-                        <h3>Titulo</h3>
-                        <p>Contenido</p>
+                        <h3>Nombre</h3>
+                        <p>Edad</p>
+                        <p>Email</p>
                     </div>
                 </div>
             </div>
@@ -18,8 +19,9 @@
                         <!-- Cargar un img -->
                     </div>
                     <div class="div-foro-info">
-                        <h3>Titulo</h3>
-                        <p>Contenido</p>
+                        <h3>Nombre</h3>
+                        <p>Edad</p>
+                        <p>Email</p>
                     </div>
                 </div>
             </div>
@@ -29,8 +31,9 @@
                         <!-- Cargar un img -->
                     </div>
                     <div class="div-foro-info">
-                        <h3>Titulo</h3>
-                        <p>Contenido</p>
+                        <h3>Nombre</h3>
+                        <p>Edad</p>
+                        <p>Email</p>
                     </div>
                 </div>
             </div>

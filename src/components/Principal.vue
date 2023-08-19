@@ -10,16 +10,17 @@
                        </div>
                        <div>
                            <br>
-                           <h3>Hola</h3>
-                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, asperiores?</p>
+                           <h3>Empresa</h3>
+                           <p>Trabajo tipo</p>
+                           <p>$20,000 pesos</p>
                        </div>
                     </div>
                     <div class="div-card-bottom">
                         <div>
-                            <p>Izquierda</p>
+                            <button type="button" class="btn btn-warning">Modificar</button>
                         </div>
                         <div>
-                            <p>Derecha</p>
+                            <button type="button" class="btn btn-danger">Eliminar</button>
                         </div>
                     </div>
                 </div>
@@ -32,16 +33,17 @@
                        </div>
                        <div>
                            <br>
-                           <h3>Hola</h3>
-                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, asperiores?</p>
+                           <h3>Empresa</h3>
+                           <p>Trabajo tipo</p>
+                           <p>$20,000 pesos</p>
                        </div>
                     </div>
                     <div class="div-card-bottom">
                         <div>
-                            <p>Izquierda</p>
+                            <button type="button" class="btn btn-warning">Modificar</button>
                         </div>
                         <div>
-                            <p>Derecha</p>
+                            <button type="button" class="btn btn-danger">Eliminar</button>
                         </div>
                     </div>
                 </div>
@@ -54,16 +56,17 @@
                        </div>
                        <div>
                            <br>
-                           <h3>Hola</h3>
-                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, asperiores?</p>
+                           <h3>Empresa</h3>
+                           <p>Trabajo tipo</p>
+                           <p>$20,000 pesos</p>
                        </div>
                     </div>
                     <div class="div-card-bottom">
                         <div>
-                            <p>Izquierda</p>
+                            <button type="button" class="btn btn-warning">Modificar</button>
                         </div>
                         <div>
-                            <p>Derecha</p>
+                            <button type="button" class="btn btn-danger">Eliminar</button>
                         </div>
                     </div>
                 </div>
@@ -79,16 +82,17 @@
                        </div>
                        <div>
                            <br>
-                           <h3>Hola</h3>
-                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, asperiores?</p>
+                           <h3>Empresa</h3>
+                           <p>Trabajo tipo</p>
+                           <p>$20,000 pesos</p>
                        </div>
                     </div>
                     <div class="div-card-bottom">
                         <div>
-                            <p>Izquierda</p>
+                            <button type="button" class="btn btn-warning">Modificar</button>
                         </div>
                         <div>
-                            <p>Derecha</p>
+                            <button type="button" class="btn btn-danger">Eliminar</button>
                         </div>
                     </div>
                 </div>
@@ -101,16 +105,17 @@
                        </div>
                        <div>
                            <br>
-                           <h3>Hola</h3>
-                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, asperiores?</p>
+                           <h3>Empresa</h3>
+                           <p>Trabajo tipo</p>
+                           <p>$20,000 pesos</p>
                        </div>
                     </div>
                     <div class="div-card-bottom">
                         <div>
-                            <p>Izquierda</p>
+                            <button type="button" class="btn btn-warning">Modificar</button>
                         </div>
                         <div>
-                            <p>Derecha</p>
+                            <button type="button" class="btn btn-danger">Eliminar</button>
                         </div>
                     </div>
                 </div>
@@ -123,16 +128,17 @@
                        </div>
                        <div>
                            <br>
-                           <h3>Hola</h3>
-                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, asperiores?</p>
+                           <h3>Empresa</h3>
+                           <p>Trabajo tipo</p>
+                           <p>$20,000 pesos</p>
                        </div>
                     </div>
                     <div class="div-card-bottom">
                         <div>
-                            <p>Izquierda</p>
+                            <button type="button" class="btn btn-warning">Modificar</button>
                         </div>
                         <div>
-                            <p>Derecha</p>
+                            <button type="button" class="btn btn-danger">Eliminar</button>
                         </div>
                     </div>
                 </div>
@@ -161,11 +167,12 @@ import 'bootstrap/dist/js/bootstrap.js';
     border-top: 2px solid #5E6A73;
     display: flex;
     justify-content: space-between;
-    padding: 10px 10px 0 10px;
+    padding: 10px 10px 10px 10px;
 }
 
 .div-image-card{
     border-radius: 15px;
     margin: 10px 10px 0 10px!important;
 }
+
 </style>
