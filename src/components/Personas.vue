@@ -1,39 +1,15 @@
 <template>
         <article class="container text-center">
         <div class="row">
-            <div class="col-ms-12 col-md-6 col-lg-4 col-xl-4">
+            <div class="col-ms-12 col-md-6 col-lg-4 col-xl-4" v-for="user in users" :key="user._id">
                 <div class="div-foro" >
                     <div class="div-foro-circular">
                         <!-- Cargar un img -->
                     </div>
                     <div class="div-foro-info">
-                        <h3>Nombre</h3>
-                        <p>Edad</p>
-                        <p>Email</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-ms-12 col-md-6 col-lg-4 col-xl-4">
-                <div class="div-foro" >
-                    <div class="div-foro-circular">
-                        <!-- Cargar un img -->
-                    </div>
-                    <div class="div-foro-info">
-                        <h3>Nombre</h3>
-                        <p>Edad</p>
-                        <p>Email</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-ms-12 col-md-6 col-lg-4 col-xl-4">
-                <div class="div-foro" >
-                    <div class="div-foro-circular">
-                        <!-- Cargar un img -->
-                    </div>
-                    <div class="div-foro-info">
-                        <h3>Nombre</h3>
-                        <p>Edad</p>
-                        <p>Email</p>
+                        <h3>{{ user.name }}</h3>
+                        <p>{{ user.age }}</p>
+                        <p>{{ user.email }}</p>
                     </div>
                 </div>
             </div>
@@ -42,10 +18,28 @@
 </template>
 
 <script>
+    import axios from 'axios';
+    import 'bootstrap/dist/js/bootstrap.js';
 export default{
-
-}
-import 'bootstrap/dist/js/bootstrap.js';
+  data() {
+    return {
+      users: [],
+    };
+  },
+  mounted() {
+    this.fetchUsers();
+  },
+  methods: {
+    async fetchUsers() {
+      try {
+        const response = await axios.get('http://localhost:9000/api/users');
+        this.users = response.data;
+      } catch (error) {
+        console.error('Error al obtener usuarios:', error);
+      }
+    },
+  },
+};
 </script>
 
 <style>

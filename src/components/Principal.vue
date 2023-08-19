@@ -1,8 +1,8 @@
 <template>
     <!--Aqui va el componente principal-->
     <article class="container text-center">
-        <div class="row">
-            <div class="col-ms-12 col-md-6 col-lg-4 col-xl-4">
+        <div class="row div-orden">
+            <div class="col-ms-12 col-md-6 col-lg-4 col-xl-4" v-for="job in jobs" :key="job._id">
                 <div class="div-card">
                     <div class="card-main">
                        <div style="background-color: blue;" class="div-image-card">
@@ -10,133 +10,15 @@
                        </div>
                        <div>
                            <br>
-                           <h3>Empresa</h3>
-                           <p>Trabajo tipo</p>
-                           <p>$20,000 pesos</p>
+                           <h3>{{ job.company }}</h3>
+                           <p>{{ job.job }}</p>
+                           <p>{{ job.payment }}</p>
                        </div>
                     </div>
                     <div class="div-card-bottom">
                         <div>
                             <button type="button" class="btn btn-warning">Modificar</button>
-                        </div>
-                        <div>
-                            <button type="button" class="btn btn-danger">Eliminar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-ms-12 col-md-6 col-lg-4 col-xl-4">
-                <div class="div-card">
-                    <div class="card-main">
-                       <div style="background-color: blue;" class="div-image-card">
-                           <img src="../assets/logo.png" alt="" class="img-fluid">
-                       </div>
-                       <div>
-                           <br>
-                           <h3>Empresa</h3>
-                           <p>Trabajo tipo</p>
-                           <p>$20,000 pesos</p>
-                       </div>
-                    </div>
-                    <div class="div-card-bottom">
-                        <div>
-                            <button type="button" class="btn btn-warning">Modificar</button>
-                        </div>
-                        <div>
-                            <button type="button" class="btn btn-danger">Eliminar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-ms-12 col-md-6 col-lg-4 col-xl-4">
-                <div class="div-card">
-                    <div class="card-main">
-                       <div style="background-color: blue;" class="div-image-card">
-                           <img src="../assets/logo.png" alt="" class="img-fluid">
-                       </div>
-                       <div>
-                           <br>
-                           <h3>Empresa</h3>
-                           <p>Trabajo tipo</p>
-                           <p>$20,000 pesos</p>
-                       </div>
-                    </div>
-                    <div class="div-card-bottom">
-                        <div>
-                            <button type="button" class="btn btn-warning">Modificar</button>
-                        </div>
-                        <div>
-                            <button type="button" class="btn btn-danger">Eliminar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-ms-12 col-md-6 col-lg-4 col-xl-4">
-                <div class="div-card">
-                    <div class="card-main">
-                       <div style="background-color: blue;" class="div-image-card">
-                           <img src="../assets/logo.png" alt="" class="img-fluid">
-                       </div>
-                       <div>
-                           <br>
-                           <h3>Empresa</h3>
-                           <p>Trabajo tipo</p>
-                           <p>$20,000 pesos</p>
-                       </div>
-                    </div>
-                    <div class="div-card-bottom">
-                        <div>
-                            <button type="button" class="btn btn-warning">Modificar</button>
-                        </div>
-                        <div>
-                            <button type="button" class="btn btn-danger">Eliminar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-ms-12 col-md-6 col-lg-4 col-xl-4">
-                <div class="div-card">
-                    <div class="card-main">
-                       <div style="background-color: blue;" class="div-image-card">
-                           <img src="../assets/logo.png" alt="" class="img-fluid">
-                       </div>
-                       <div>
-                           <br>
-                           <h3>Empresa</h3>
-                           <p>Trabajo tipo</p>
-                           <p>$20,000 pesos</p>
-                       </div>
-                    </div>
-                    <div class="div-card-bottom">
-                        <div>
-                            <button type="button" class="btn btn-warning">Modificar</button>
-                        </div>
-                        <div>
-                            <button type="button" class="btn btn-danger">Eliminar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-ms-12 col-md-6 col-lg-4 col-xl-4">
-                <div class="div-card">
-                    <div class="card-main">
-                       <div style="background-color: blue;" class="div-image-card">
-                           <img src="../assets/logo.png" alt="" class="img-fluid">
-                       </div>
-                       <div>
-                           <br>
-                           <h3>Empresa</h3>
-                           <p>Trabajo tipo</p>
-                           <p>$20,000 pesos</p>
-                       </div>
-                    </div>
-                    <div class="div-card-bottom">
-                        <div>
-                            <button type="button" class="btn btn-warning">Modificar</button>
-                        </div>
+                        </div>  
                         <div>
                             <button type="button" class="btn btn-danger">Eliminar</button>
                         </div>
@@ -149,10 +31,28 @@
 </template>
 
 <script>
+    import axios from 'axios';
+    import 'bootstrap/dist/js/bootstrap.js';
 export default{
-
+    data() {
+    return {
+      jobs: [],
+    };
+  },
+  mounted() {
+    this.fetchJops();
+  },
+  methods: {
+    async fetchJops() {
+      try {
+        const response = await axios.get('http://localhost:9000/api/jobs');
+        this.jobs = response.data;
+      } catch (error) {
+        console.error('Error al obtener las empresas:', error);
+      }
+    },
+  },
 }
-import 'bootstrap/dist/js/bootstrap.js';
 </script>
 
 <style>
