@@ -1,6 +1,8 @@
 <template>
     <!--Aqui va el componente principal-->
     <article class="container text-center">
+        <h1>Empresas</h1>
+        <br>
         <div class="row div-orden">
             <div class="col-ms-12 col-md-6 col-lg-4 col-xl-4" v-for="job in jobs" :key="job._id">
                 <div class="div-card">

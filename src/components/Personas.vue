@@ -1,19 +1,21 @@
 <template>
-        <article class="container text-center">
-        <div class="row">
-            <div class="col-ms-12 col-md-6 col-lg-4 col-xl-4" v-for="user in users" :key="user._id">
-                <div class="div-foro" >
-                    <div class="div-foro-circular">
-                        <img src="../assets/cara.webp" alt="" class="img-fluid">
-                    </div>
-                    <div class="div-foro-info">
-                        <h3>{{ user.name }}</h3>
-                        <p>{{ user.age }}</p>
-                        <p>{{ user.email }}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <article class="container text-center">
+      <h1>Personas</h1>
+      <br>
+      <div class="row">
+          <div class="col-ms-12 col-md-6 col-lg-4 col-xl-4" v-for="user in users" :key="user._id">
+              <div class="div-foro" >
+                  <div class="div-foro-circular">
+                      <img src="../assets/cara.webp" alt="" class="img-fluid">
+                  </div>
+                  <div class="div-foro-info">
+                      <h3>{{ user.name }}</h3>
+                      <p>{{ user.age }}</p>
+                      <p>{{ user.email }}</p>
+                  </div>
+              </div>
+          </div>
+      </div>
     </article>
 </template>
 
